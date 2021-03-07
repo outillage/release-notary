@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Run Commitsar
         uses: docker://aevea/commitsar@sha256:91cd7c6fed41f8207995a1e8719bda34aa695668142a2c36f5a65d6c67e16c3d
