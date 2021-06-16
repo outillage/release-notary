@@ -12,7 +12,7 @@ RUN go mod download
 COPY . /app/
 RUN CGO_ENABLED=0 go build -a -tags "osusergo netgo" --ldflags "-linkmode external -extldflags '-static'" -o build/release-notary .
 
-FROM alpine:3.13.2
+FROM alpine:3.14.0
 RUN  apk add --no-cache --virtual=.run-deps ca-certificates git &&\
     mkdir /app
 
